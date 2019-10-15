@@ -58,6 +58,7 @@ def Update_selected():
     conn.commit()
     view_all()
 
+# for deleting the item from database
 def delete():
     conn = sqlite3.connect("directory.db")
     c = conn.cursor()
@@ -71,6 +72,7 @@ def delete():
     else:
         pass
 
+# exit function prompt generation
 def exit():
     result=messagebox.askyesno("Alert","do you want to exit")
     if result==True:
